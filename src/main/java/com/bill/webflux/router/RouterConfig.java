@@ -15,10 +15,10 @@ public class RouterConfig {
     @Bean
     public RouterFunction<ServerResponse> userRouter(UserHandler userHandler) {
         return RouterFunctions
-                .route(GET("/user/findOne/{id}").and(accept(MediaType.APPLICATION_JSON)), userHandler::findOne)
-                .andRoute(GET("/user/findAll").and(accept(MediaType.APPLICATION_JSON)), userHandler::findAll)
-                .andRoute(POST("/user/save").and(accept(MediaType.APPLICATION_JSON)), userHandler::save)
-                .andRoute(POST("/user/delete").and(accept(MediaType.APPLICATION_JSON)), userHandler::delete)
-                .andRoute(POST("/user/update").and(accept(MediaType.APPLICATION_JSON)), userHandler::update);
+                .route(GET("/user/{id}").and(accept(MediaType.APPLICATION_JSON)), userHandler::findOne)
+                .andRoute(GET("/user").and(accept(MediaType.APPLICATION_JSON)), userHandler::findAll)
+                .andRoute(POST("/user").and(accept(MediaType.APPLICATION_JSON)), userHandler::save)
+                .andRoute(DELETE("/user").and(accept(MediaType.APPLICATION_JSON)), userHandler::delete)
+                .andRoute(PUT("/user").and(accept(MediaType.APPLICATION_JSON)), userHandler::update);
     }
 }

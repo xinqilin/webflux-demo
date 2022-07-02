@@ -1,9 +1,9 @@
 ### GET request one
-GET http://localhost:8080/user/findOne/2
+GET http://localhost:8080/user/2
 Accept: application/json
 
 ### GET request all
-GET http://localhost:8080/user/findAll
+GET http://localhost:8080/user
 Accept: application/json
 
 ### Send POST request with json body
@@ -11,7 +11,7 @@ POST http://localhost:8080/user
 Content-Type: application/json
 
 {
-  "id": 4,
+  "id": null,
   "name": "善平",
   "gender": "Female",
   "age": 28
@@ -22,7 +22,7 @@ PUT http://localhost:8080/user
 Content-Type: application/json
 
 {
-
+  "id": 4,
   "name": "善平",
   "gender": "Male",
   "age": 28

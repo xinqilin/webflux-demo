@@ -17,33 +17,33 @@ public class UserController {
     }
 
     //查詢一個使用者
-    @GetMapping("/findOne/{id}")
+    @GetMapping("/{id}")
     public Mono<User> findOne(@PathVariable Integer id) {
         return userService.findOne(id);
     }
 
     //查詢全部使用者
-    @GetMapping("/findAll")
+    @GetMapping("")
     public Flux<User> findAll() {
         return userService.findAll();
     }
 
     //新增一個使用者
-    @PostMapping("/save")
+    @PostMapping("")
     public Mono<Void> save(@RequestBody User user) {
         Mono<User> userMono = Mono.just(user);
         return userService.save(userMono);
     }
 
     //刪除一個使用者
-    @PostMapping("/delete")
+    @DeleteMapping("")
     public Mono<Void> delete(@RequestBody User user) {
         Mono<User> userMono = Mono.just(user);
         return userService.delete(userMono);
     }
 
     //更新一個使用者
-    @PostMapping("/update")
+    @PutMapping("")
     public Mono<Void> update(@RequestBody User user) {
         Mono<User> userMono = Mono.just(user);
         return userService.update(userMono);
