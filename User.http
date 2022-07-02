@@ -1,0 +1,37 @@
+### GET request one
+GET http://localhost:8080/user/findOne/2
+Accept: application/json
+
+### GET request all
+GET http://localhost:8080/user/findAll
+Accept: application/json
+
+### Send POST request with json body
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "善平",
+  "gender": "Female",
+  "age": 28
+}
+
+### Send Put request with json body
+PUT http://localhost:8080/user
+Content-Type: application/json
+
+{
+
+  "name": "善平",
+  "gender": "Male",
+  "age": 28
+}
+
+### Send Delete request with json body
+DELETE http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "id": 1
+}

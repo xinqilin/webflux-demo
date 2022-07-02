@@ -14,9 +14,9 @@ public class UserDaoImpl implements UserDao{
 
     //呼叫無參構造初始化
     public UserDaoImpl() {
-        users.put(1, new User(1, "張三", "男", 18));
-        users.put(2, new User(2, "李四", "女", 19));
-        users.put(3, new User(3, "王五", "男", 20));
+        users.put(1, new User(1, "Bill", "Male", 10));
+        users.put(2, new User(2, "Paul", "Female", 20));
+        users.put(3, new User(3, "David", "Male", 30));
     }
 
     @Override
